@@ -125,7 +125,7 @@ def play(puzzle):
     
     
 
-def show_board(puzzle):
+def drawBoard(puzzle):
             print("""\n+---+---+---+
 | {} | {} | {} |
 +---+---+---+
@@ -141,7 +141,7 @@ def enterBoard(puzzle):
         print("\nEnter the board values with spaces: ")
         puzzle = list(map(int, input().split()))
         print("\nIs the following board correct?")
-        show_board(puzzle)
+        drawBoard(puzzle)
         print('\n')
         mm = input("Type 'y' if board is correct: ").lower()
     return puzzle
