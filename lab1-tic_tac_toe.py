@@ -65,26 +65,26 @@ def compMove():
                 move = i
                 return move
 
-    cornersOpen = []
+    corners = []
     for i in possibleMoves:
         if i in [1,3,7,9]:
-            cornersOpen.append(i)
+            corners.append(i)
             
-    if len(cornersOpen) > 0:
-        move = selectRandom(cornersOpen)
+    if len(corners) > 0:
+        move = selectRandom(corners)
         return move
 
     if 5 in possibleMoves:
         move = 5
         return move
 
-    edgesOpen = []
+    midedges = []
     for i in possibleMoves:
         if i in [2,4,6,8]:
-            edgesOpen.append(i)
+            midedges.append(i)
             
-    if len(edgesOpen) > 0:
-        move = selectRandom(edgesOpen)
+    if len(midedges) > 0:
+        move = selectRandom(midedges)
         
     return move
 
@@ -102,7 +102,6 @@ def isBoardFull(board):
         return True
 
 def main():
-    print('Welcome to Tic Tac Toe!')
     drawBoard(board)
 
     while not(isBoardFull(board)):
