@@ -46,14 +46,14 @@ def playerMove():
                     run = False
                     inputLetter('X', move)
                 else:
-                    print('This space is occupied, enter another num!')
+                    print('This space is occupied')
             else:
-                print('Select a number within the range!')
+                print('Select a number within 1-9')
         except:
-            print('No num was entered! Enter a number!')
+            print('No position was entered, enter a number')
             
 
-def Compmove():
+def compMove():
     possibleMoves = [t for t, letter in enumerate(board) if letter == ' ' and t != 0]
     move = 0
 
@@ -114,7 +114,7 @@ def main():
             break
 
         if not(isWinner(board, 'X')):
-            move = Compmove()
+            move = compMove()
             if move == 0:
                 print('Game is tied!')
             else:
