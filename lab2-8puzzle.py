@@ -152,3 +152,5 @@ k=zeroindex(puzzle)
 if check(puzzle):
     puzzle.append(k)
     play(puzzle)
+else:
+    print("Can't solve")
